@@ -11,3 +11,15 @@ json.photo_url student.photo_url
 json.capstone_name student.capstone_name
 json.capstone_description student.capstone_description
 json.capstone_url student.capstone_url
+
+json.experiences do
+  json.array! student.experiences, partial: "api/experiences/experience", as: :experience
+end
+
+json.educations do
+  json.array! student.educations, partial: "api/educations/education", as: :education
+end
+
+json.skills do
+  json.array! student.skills, partial: "api/skills/skill", as: :skill
+end
