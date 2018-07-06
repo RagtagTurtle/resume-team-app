@@ -18,7 +18,7 @@ class Api::StudentsController < ApplicationController
                             photo_url: params[:photo_url],
                             capstone_name: params[:capstone_name],
                             capstone_description: params[:capstone_description],
-                            capstone_url: params[:capstone_url],
+                            capstone_url: params[:capstone_url]
                           )
     @student.save
     render 'show.json.jbuilder'
