@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180705234150) do
+=======
+ActiveRecord::Schema.define(version: 20180705234731) do
+>>>>>>> c6a261e1c48d927b8f3b19021543849a52341717
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +41,9 @@ ActiveRecord::Schema.define(version: 20180705234150) do
     t.string "photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "capstone_name"
+    t.text "capstone_description"
+    t.string "capstone_url"
   end
 
 end
