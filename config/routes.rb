@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
-    # steve
-    # jennifer
+    post '/experiences' => 'experiences#create'
+    patch '/experiences/:id' => 'experiences#update'
+    delete '/experiences/:id' => 'experiences#destroy'
   end
 end
