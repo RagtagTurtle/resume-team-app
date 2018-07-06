@@ -12,7 +12,7 @@ class Api::ExperiencesController < ApplicationController
 
   def update
     experience_id = params[:id]
-    @experience = experience.find(experience_id)
+    @experience = Experience.find(experience_id)
 
     @experience.start_date = params[:start_date] || @experience.start_date
     @experience.end_date = params[:end_date] || @experience.end_date
