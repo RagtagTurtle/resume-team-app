@@ -3,6 +3,7 @@ class Api::SkillsController < ApplicationController
     @skill = Skill.new(
                                   name: params[:skill_name]
                                  )
+    @skill.save
     render 'show.json.jbuilder'
   end
 
@@ -11,7 +12,7 @@ class Api::SkillsController < ApplicationController
     @skill = Skill.find(skill_id)
 
     @skill.skill_name = params[:skill_name] || @skill.skill_name
-  
+    @skill.save
 
     render 'show.json.jbuilder'
   end
