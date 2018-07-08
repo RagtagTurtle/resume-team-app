@@ -28,6 +28,13 @@ class Api::StudentsController < ApplicationController
     student_id = params[:id]
     @student = Student.find(student_id)
     render 'show.json.jbuilder'
+
+    # if current_user
+    #   @student = current_user.student
+    #   render 'show.json.jbuilder'
+    # else
+    #   render json: []
+    # end
   end
 
   def update
