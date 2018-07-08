@@ -1,6 +1,7 @@
 class Api::SkillsController < ApplicationController
   def create
     @skill = Skill.new(
+                                  student_id: current_user.id,
                                   name: params[:skill_name]
                                  )
     @skill.save
