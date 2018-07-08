@@ -20,5 +20,7 @@ Rails.application.routes.draw do
     patch '/skills/:id' => 'skills#update'
     delete '/skills/:id' => 'skills#destroy'
 
+    post '/users' => 'users#create'
+
   end
 end
